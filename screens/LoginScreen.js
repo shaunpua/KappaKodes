@@ -14,7 +14,7 @@ import LoginButton from "./../components/LoginButtons";
 
 const LoginScreen = ({ navigation }) => {
   return (
-    <View style={StyleSheet.container}>
+    <View style={styles.container}>
       <Image
         source={require("../assets/kidwritting.png")}
         style={styles.logo}
@@ -35,9 +35,9 @@ export default LoginScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
     backgroundColor: "#ffffff",
     justifyContent: "center",
+    alignItems: "center",
   },
   commandButton: {
     marginTop: 10,
@@ -53,9 +53,8 @@ const styles = StyleSheet.create({
   },
   panelButtonTitle: {
     fontSize: 24,
-    fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Lato-Regular",
+    fontFamily: "Montserrat",
   },
   logo: {
     height: 450,

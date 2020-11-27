@@ -52,8 +52,7 @@ const styles = StyleSheet.create({
   },
   welcomeTitle: {
     fontSize: 40,
-    fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Lato-Regular",
+    fontFamily: "Montserrat",
   },
 });
