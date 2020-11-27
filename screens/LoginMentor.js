@@ -13,9 +13,10 @@ import { windowHeight, windowWidth } from "../utils/Dimentions";
 import LoginButton from "./../components/LoginButtons";
 import FormInput from "../components/FormInput";
 
+
 const LoginMentor = ({ navigation }) => {
   return (
-    <View style={StyleSheet.container}>
+    <View style={styles.container}>
       <Text style={styles.welcomeTitle}>Welcome.</Text>
       <FormInput
         //labelValue={Emails}
@@ -27,15 +28,10 @@ const LoginMentor = ({ navigation }) => {
         placeholderText="Password"
         secureTextEntry={true}
       />
-
       <LoginButton
         buttonTitle="Log In As Mentor"
         onPress={() => navigation.navigate("Home")}
       />
-      <Text style={{ color: "black" }}>
-        Don't have an account yet?
-        <Text style={{ color: "blue" }}> Sign Up</Text>
-      </Text>
     </View>
   );
 };

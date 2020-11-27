@@ -15,9 +15,9 @@ import FormInput from "../components/FormInput";
 
 const LoginLearner = ({ navigation }) => {
   return (
-    <View style={StyleSheet.container}>
+    <View style={styles.container}>
       <Text style={styles.welcomeTitle}>Welcome.</Text>
-      <FormInput
+      <FormInput 
         //labelValue={Emails}
         placeholderText="Email"
         secureTextEntry={false}
@@ -27,15 +27,10 @@ const LoginLearner = ({ navigation }) => {
         placeholderText="Password"
         secureTextEntry={true}
       />
-
       <LoginButton
         buttonTitle="Log In As Learner"
         onPress={() => navigation.navigate("Home")}
       />
-      <Text style={{ color: "black" }}>
-        Don't have an account yet?
-        <Text style={{ color: "blue" }}> Sign Up</Text>
-      </Text>
     </View>
   );
 };
@@ -53,6 +48,6 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Lato-Regular",
+    fontFamily: "Montserrat",
   },
 });
