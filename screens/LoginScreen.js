@@ -21,11 +21,18 @@ const LoginScreen = ({ navigation }) => {
       />
       <LoginButton
         buttonTitle="Log In As Mentor"
-        onPress={() => navigation.navigate("LoginMentor")}
+        onPress={() => navigation.navigate("LoginMen")}
       />
-      <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.commandButton}
+        onPress={() => navigation.navigate("LoginLearn")}
+      >
         <Text style={styles.panelButtonTitle}>Log In As Learner</Text>
       </TouchableOpacity>
+      <Text style={{ color: "black" }}>
+        Don't have an account yet?
+        <Text style={{ color: "blue" }}> Sign Up</Text>
+      </Text>
     </View>
   );
 };

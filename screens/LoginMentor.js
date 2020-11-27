@@ -32,10 +32,9 @@ const LoginMentor = ({ navigation }) => {
         buttonTitle="Log In As Mentor"
         onPress={() => navigation.navigate("Home")}
       />
-      <Text style={{ color: "blue" }}>
-        I am blue
-        <Text style={{ color: "red" }}>i am red</Text>
-        and i am blue again
+      <Text style={{ color: "black" }}>
+        Don't have an account yet?
+        <Text style={{ color: "blue" }}> Sign Up</Text>
       </Text>
     </View>
   );
