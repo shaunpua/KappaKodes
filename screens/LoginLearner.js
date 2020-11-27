@@ -32,6 +32,10 @@ const LoginLearner = ({ navigation }) => {
         buttonTitle="Log In As Learner"
         onPress={() => navigation.navigate("Home")}
       />
+      <Text style={{ color: "black" }}>
+        Don't have an account yet?
+        <Text style={{ color: "blue" }}> Sign Up</Text>
+      </Text>
     </View>
   );
 };
