@@ -1,6 +1,6 @@
 import React from "react";
 import {Cards} from "./../components/Cards.js";
-
+import {FontAwesome5} from "@expo/vector-icons"
 import {
   View,
   Text,
@@ -8,22 +8,26 @@ import {
   Image,
   Platform,
   StyleSheet,
+  SafeAreaView
 } from "react-native";
 
-const HomeScreen = () => {
-  return (
-    <View>
-<<<<<<< Updated upstream
-      <Text>Home Screen I think lel</Text>
-=======
-      <Text>Home Screen</Text>
-      <TouchableOpacity><Cards title='Looking for English Tutor' time='Posted 3h ago' description='Hi! I’m looking for an english tutor to help me out with my research projects' budget='450.00'></Cards></TouchableOpacity>
->>>>>>> Stashed changes
-    </View>
-  );
-};
-
-export default HomeScreen;
+export default class HomeScreen extends React.PureComponent{
+  static navigationOptions = {
+    header: null,
+  }
+  
+  render(){
+    
+    return (
+      <View>
+        <SafeAreaView style={{flex:1}}>
+          <TouchableOpacity style={{alignItems: "flex-start", margin: 16}} onPress={this.props.navigation.openDrawer}>
+            <FontAwesome5 name='bars' size={24} color="#042B67" />
+          </TouchableOpacity>
+        </SafeAreaView>
+      </View>
+    );
+}}
 
 const styles = StyleSheet.create({
   container: {
