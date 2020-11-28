@@ -29,7 +29,7 @@ const LoginMentor = ({ navigation }) => {
       />
       <LoginButton
         buttonTitle="Log In As Mentor"
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("Navigation")}
       />
     </View>
   );

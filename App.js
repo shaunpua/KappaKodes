@@ -8,7 +8,7 @@ import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 import LoginMentor from "./screens/LoginMentor";
 import LoginLearner from "./screens/LoginLearner";
-import HomeScreen from "./screens/HomeScreen";
+import NavigationScreen from "./screens/NavigationScreen";
 
 const Stack = createStackNavigator();
 
@@ -20,7 +20,7 @@ export default function App() {
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="LoginMen" component={LoginMentor} />
         <Stack.Screen name="LoginLearn" component={LoginLearner} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Navigation" component={NavigationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -17,7 +17,7 @@ const LoginLearner = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeTitle}>Welcome.</Text>
-      <FormInput 
+      <FormInput
         //labelValue={Emails}
         placeholderText="Email"
         secureTextEntry={false}
@@ -29,7 +29,7 @@ const LoginLearner = ({ navigation }) => {
       />
       <LoginButton
         buttonTitle="Log In As Learner"
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("Navigation")}
       />
     </View>
   );

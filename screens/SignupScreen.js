@@ -47,14 +47,14 @@ const SignupScreen = ({ navigation }) => {
       />
 
       <LoginButton
-        buttonTitle="Log In As Mentor"
-        onPress={() => navigation.navigate("Home")}
+        buttonTitle="Sign Up As Mentor"
+        onPress={() => navigation.navigate("Navigation")}
       />
       <TouchableOpacity
         style={styles.commandButton}
-        onPress={() => navigation.navigate("LoginLearn")}
+        onPress={() => navigation.navigate("Navigation")}
       >
-        <Text style={styles.panelButtonTitle}>Log In As Learner</Text>
+        <Text style={styles.panelButtonTitle}>Signup As Learner</Text>
       </TouchableOpacity>
     </View>
   );
@@ -73,19 +73,19 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Lato-Regular",
+    fontFamily: "Montserrat",
   },
   welcomeTitle: {
     fontSize: 40,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Lato-Regular",
+    fontFamily: "Montserrat",
   },
   welcomeBelow: {
     fontSize: 10,
     fontWeight: "bold",
     color: "black",
-    fontFamily: "Lato-Regular",
+    fontFamily: "Montserrat",
   },
   commandButton: {
     marginTop: 10,
@@ -103,6 +103,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Lato-Regular",
+    fontFamily: "Montserrat",
   },
 });

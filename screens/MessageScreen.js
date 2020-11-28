@@ -9,15 +9,15 @@ import {
   StyleSheet,
 } from "react-native";
 
-const HomeScreen = () => {
+const MessageScreen = () => {
   return (
     <View>
-      <Text>Home Screen</Text>
+      <Text>Message Screen</Text>
     </View>
   );
 };
 
-export default HomeScreen;
+export default MessageScreen;
 
 const styles = StyleSheet.create({
   container: {
