@@ -12,7 +12,7 @@ import {
 const NotifScreen = () => {
   return (
     <View>
-      <Text>Message Screen</Text>
+      <Text>Notif Screen</Text>
     </View>
   );
 };

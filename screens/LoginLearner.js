@@ -17,7 +17,7 @@ const LoginLearner = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeTitle}>Welcome.</Text>
-      <FormInput
+      <FormInput 
         //labelValue={Emails}
         placeholderText="Email"
         secureTextEntry={false}
@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Montserrat",
+    fontFamily: "Roboto",
   },
 });

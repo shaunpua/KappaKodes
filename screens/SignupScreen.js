@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   View,
   Text,
@@ -15,6 +15,37 @@ import LoginButton from "./../components/LoginButtons";
 import FormInput from "../components/FormInput";
 import DropDownPicker from "react-native-dropdown-picker";
 
+class PickerComponent extends Component {
+  state = {
+    Gender: "I am..",
+  };
+  render() {
+    return (
+      <View>
+        <Picker
+          selectedValue={this.state.Gender}
+          style={{
+            height: 50,
+            width: 330,
+            alignSelf: "center",
+            marginLeft: 20,
+            borderColor: "#ccc",
+            borderRadius: 3,
+            borderWidth: 1,
+            flexDirection: "row",
+          }}
+          onValueChange={(itemValue, itemIndex) =>
+            this.setState({ Gender: itemValue })
+          }
+        >
+          <Picker.Item value="" label="Gender" />
+          <Picker.Item label="Male" value="male" />
+          <Picker.Item label="Female" value="female" />
+        </Picker>
+      </View>
+    );
+  }
+}
 const SignupScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -42,12 +73,7 @@ const SignupScreen = ({ navigation }) => {
         placeholderText="Email"
         secureTextEntry={false}
       />
-      <FormInput
-        //labelValue={Password}
-        placeholderText="I am a..."
-        secureTextEntry={false}
-      />
-
+      <PickerComponent></PickerComponent>
       <LoginButton
         buttonTitle="Sign Up As Mentor"
         onPress={() => navigation.navigate("Navigation")}
@@ -58,27 +84,6 @@ const SignupScreen = ({ navigation }) => {
       >
         <Text style={styles.panelButtonTitle}>Signup As Learner</Text>
       </TouchableOpacity>
-      <Picker
-        prompt="Gender"
-        selectedValue={"gender"}
-        style={{
-          marginLeft: 15,
-          marginTop: 5,
-          marginBottom: 10,
-          height: 50,
-          width: "100%",
-          borderColor: "#ccc",
-          borderRadius: 3,
-          borderWidth: 1,
-        }}
-        itemStyle={{ marginLeft: 50 }}
-        onValueChange={(itemValue) => {
-          itemValue;
-        }}
-      >
-        <Picker.Item label="Male" value="male" />
-        <Picker.Item label="Female" value="female" />
-      </Picker>
     </View>
   );
 };
@@ -97,19 +102,19 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Montserrat",
+    fontFamily: "Roboto",
   },
   welcomeTitle: {
     fontSize: 40,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Montserrat",
+    fontFamily: "Roboto",
   },
   welcomeBelow: {
     fontSize: 10,
     fontWeight: "bold",
     color: "black",
-    fontFamily: "Montserrat",
+    fontFamily: "Roboto",
   },
   commandButton: {
     marginTop: 10,
@@ -127,6 +132,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     color: "#042B67",
-    fontFamily: "Arial",
+    fontFamily: "Roboto",
   },
 });
