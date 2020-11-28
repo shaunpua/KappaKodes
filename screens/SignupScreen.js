@@ -9,7 +9,7 @@ import {
   StyleSheet,
 } from "react-native";
 import { windowHeight, windowWidth } from "../utils/Dimentions";
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from "@react-native-picker/picker";
 
 import LoginButton from "./../components/LoginButtons";
 import FormInput from "../components/FormInput";
@@ -40,12 +40,12 @@ const SignupScreen = ({ navigation }) => {
       <FormInput
         //labelValue={Password}
         placeholderText="Email"
-        secureTextEntry={true}
+        secureTextEntry={false}
       />
       <FormInput
         //labelValue={Password}
         placeholderText="I am a..."
-        secureTextEntry={true}
+        secureTextEntry={false}
       />
 
       <LoginButton
@@ -59,20 +59,23 @@ const SignupScreen = ({ navigation }) => {
         <Text style={styles.panelButtonTitle}>Signup As Learner</Text>
       </TouchableOpacity>
       <Picker
-      prompt='Gender'
-        selectedValue={'gender'}
+        prompt="Gender"
+        selectedValue={"gender"}
         style={{
-          marginLeft:15,
+          marginLeft: 15,
           marginTop: 5,
-          marginBottom: 10, 
-          height: 50, 
-          width: "100%", 
+          marginBottom: 10,
+          height: 50,
+          width: "100%",
           borderColor: "#ccc",
           borderRadius: 3,
-          borderWidth: 1,}}
-        itemStyle={{marginLeft:50}}
-        onValueChange={(itemValue) => 
-           {itemValue}}>
+          borderWidth: 1,
+        }}
+        itemStyle={{ marginLeft: 50 }}
+        onValueChange={(itemValue) => {
+          itemValue;
+        }}
+      >
         <Picker.Item label="Male" value="male" />
         <Picker.Item label="Female" value="female" />
       </Picker>
@@ -88,7 +91,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#ffffff",
     justifyContent: "center",
-    padding:20,
+    padding: 20,
   },
   welcomeTitle: {
     fontSize: 40,
