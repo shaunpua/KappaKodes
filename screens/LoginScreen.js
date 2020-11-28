@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     justifyContent: "center",
     alignItems: "center",
-    padding:20,
   },
   commandButton: {
     marginTop: 10,
@@ -64,7 +63,7 @@ const styles = StyleSheet.create({
   panelButtonTitle: {
     fontSize: 24,
     color: "#042B67",
-    fontFamily: "Montserrat",
+    fontFamily: "Roboto",
   },
   logo: {
     height: 450,
