@@ -1,7 +1,14 @@
 import React from "react";
 import { Cards } from "./../components/Cards.js";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import ProfileScreen from "./../screens/ProfileScreen.js";
+import StatsScreen from "./../screens/StatsScreen.js";
 import {
+  Button,
+  Dimensions,
   View,
   Text,
   TouchableOpacity,
@@ -10,24 +17,38 @@ import {
   StyleSheet,
   SafeAreaView,
 } from "react-native";
+
 import StarRating from "../components/StarRating";
 
-export default class HomeScreen extends React.PureComponent {
-  static navigationOptions = {
-    header: null,
-  };
+const AppDrawer = createDrawerNavigator();
 
-  render() {
+const Stack = createStackNavigator();
+function HomeStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={ HomeScreen} />
+      <Stack.Screen name="Profile" component={ ProfileScreen} />
+      <Stack.Screen name="Stats" component={StatsScreen} />
+    </Stack.Navigator>
+  );
+}
+
+const MyAppDrawer= () =>{
+  return (
+    <AppDrawer.Navigator drawerType='slide' drawerPosition='right' initialRouteName="Home">
+      <AppDrawer.Screen name="Home" component={ HomeScreen} />
+      <AppDrawer.Screen name="ProfileScreen" component={ProfileScreen} />
+      <AppDrawer.Screen name="StatsScreen" component={StatsScreen} />
+    </AppDrawer.Navigator>
+  );
+}
+
+const HomeScreen = ({navigation})=>{
     return (
       <View>
-        <SafeAreaView style={{ flex: 1 }}>
-          <TouchableOpacity
-            style={{ alignItems: "flex-start", margin: 16 }}
-            onPress={this.props.navigation.openDrawer}
-          >
-            <FontAwesome5 name="bars" size={24} color="#042B67" />
-          </TouchableOpacity>
-        </SafeAreaView>
+      <NavigationContainer independent={true}>
+        <MyAppDrawer/>
+      </NavigationContainer>
         <View style={styles.cardsWrapper}>
           <Text
             style={{
@@ -73,7 +94,8 @@ export default class HomeScreen extends React.PureComponent {
       </View>
     );
   }
-}
+
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -125,3 +147,5 @@ const styles = StyleSheet.create({
     color: "#444",
   },
 });
+
+
