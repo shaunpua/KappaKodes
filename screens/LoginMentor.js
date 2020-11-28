@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#ffffff",
     justifyContent: "center",
+    padding:20, 
   },
   welcomeTitle: {
     fontSize: 40,

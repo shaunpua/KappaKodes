@@ -9,9 +9,11 @@ import {
   StyleSheet,
 } from "react-native";
 import { windowHeight, windowWidth } from "../utils/Dimentions";
+import {Picker} from '@react-native-picker/picker';
 
 import LoginButton from "./../components/LoginButtons";
 import FormInput from "../components/FormInput";
+import DropDownPicker from "react-native-dropdown-picker";
 
 const SignupScreen = ({ navigation }) => {
   return (
@@ -40,6 +42,7 @@ const SignupScreen = ({ navigation }) => {
         placeholderText="Email"
         secureTextEntry={true}
       />
+<<<<<<< HEAD
       <FormInput
         //labelValue={Password}
         placeholderText="I am a..."
@@ -56,6 +59,26 @@ const SignupScreen = ({ navigation }) => {
       >
         <Text style={styles.panelButtonTitle}>Signup As Learner</Text>
       </TouchableOpacity>
+=======
+      <Picker
+      prompt='Gender'
+        selectedValue={'gender'}
+        style={{
+          marginLeft:15,
+          marginTop: 5,
+          marginBottom: 10, 
+          height: 50, 
+          width: "100%", 
+          borderColor: "#ccc",
+          borderRadius: 3,
+          borderWidth: 1,}}
+        itemStyle={{marginLeft:50}}
+        onValueChange={(itemValue) => 
+           {itemValue}}>
+        <Picker.Item label="Male" value="male" />
+        <Picker.Item label="Female" value="female" />
+      </Picker>
+>>>>>>> 9fced18b8cd0518535fedc02a8a5485105fc15d7
     </View>
   );
 };
@@ -68,6 +91,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#ffffff",
     justifyContent: "center",
+    padding:20,
   },
   welcomeTitle: {
     fontSize: 40,
@@ -103,6 +127,10 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     color: "#042B67",
+<<<<<<< HEAD
     fontFamily: "Montserrat",
+=======
+    fontFamily: "Arial",
+>>>>>>> 9fced18b8cd0518535fedc02a8a5485105fc15d7
   },
 });
