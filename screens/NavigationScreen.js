@@ -68,7 +68,7 @@ const NavigationScreen = () => {
         name="Stats"
         component={StatsScreen}
         options={{
-          tabBarLabel: "Notifications",
+          tabBarLabel: "Stats",
           tabBarColor: "#694fad",
           tabBarIcon: () => (
             <Icon name="ios-stats" color={"#042B67"} size={26} />
