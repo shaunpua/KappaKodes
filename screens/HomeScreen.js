@@ -46,9 +46,11 @@ const MyAppDrawer= () =>{
 const HomeScreen = ({navigation})=>{
     return (
       <View>
-      <NavigationContainer independent={true}>
-        <MyAppDrawer/>
-      </NavigationContainer>
+      <AppDrawer.Navigator drawerType='slide' drawerPosition='right' initialRouteName="Home">
+      <AppDrawer.Screen name="Home" component={ HomeScreen} />
+      <AppDrawer.Screen name="ProfileScreen" component={ProfileScreen} />
+      <AppDrawer.Screen name="StatsScreen" component={StatsScreen} />
+         </AppDrawer.Navigator>
         <View style={styles.cardsWrapper}>
           <Text
             style={{

@@ -43,13 +43,35 @@ const NavigationScreen = () => {
         }}
       />
       <Tab.Screen
-        name="Notifcations"
+        name="Notifications"
         component={NotifScreen}
         options={{
           tabBarLabel: "Notifications",
           tabBarColor: "#694fad",
           tabBarIcon: () => (
             <Icon name="ios-notifications" color={"#042B67"} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile Screen"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: "Profile",
+          tabBarColor: "#694fad",
+          tabBarIcon: () => (
+            <Icon name="md-person" color={"#042B67"} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Stats"
+        component={StatsScreen}
+        options={{
+          tabBarLabel: "Notifications",
+          tabBarColor: "#694fad",
+          tabBarIcon: () => (
+            <Icon name="ios-stats" color={"#042B67"} size={26} />
           ),
         }}
       />
