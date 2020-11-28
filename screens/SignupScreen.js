@@ -9,39 +9,42 @@ import {
   StyleSheet,
 } from "react-native";
 import { windowHeight, windowWidth } from "../utils/Dimentions";
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from "@react-native-picker/picker";
 
 import LoginButton from "./../components/LoginButtons";
 import FormInput from "../components/FormInput";
 import DropDownPicker from "react-native-dropdown-picker";
 
-class PickerComponent extends Component {    
-    state = {  
-         Gender: 'I am..' 
-      }
-    render(){
-      return(
-        <View>
-          <Picker
-            selectedValue={this.state.Gender}
-            style={{height: 50, 
-              width:330,
-              alignSelf:"center",
-              marginLeft:20,
-              borderColor: "#ccc",
-              borderRadius: 3,
-              borderWidth: 1,
-              flexDirection:"row"}}
-            onValueChange={(itemValue, itemIndex) =>
-              this.setState({Gender: itemValue})
-            }>
-            <Picker.Item value='' label='Gender' />  
-            <Picker.Item label="Male" value="male" />
-            <Picker.Item label="Female" value="female"/>
-          </Picker>
-        </View>
-      )
-    }
+class PickerComponent extends Component {
+  state = {
+    Gender: "I am..",
+  };
+  render() {
+    return (
+      <View>
+        <Picker
+          selectedValue={this.state.Gender}
+          style={{
+            height: 50,
+            width: 330,
+            alignSelf: "center",
+            marginLeft: 20,
+            borderColor: "#ccc",
+            borderRadius: 3,
+            borderWidth: 1,
+            flexDirection: "row",
+          }}
+          onValueChange={(itemValue, itemIndex) =>
+            this.setState({ Gender: itemValue })
+          }
+        >
+          <Picker.Item value="" label="Gender" />
+          <Picker.Item label="Male" value="male" />
+          <Picker.Item label="Female" value="female" />
+        </Picker>
+      </View>
+    );
+  }
 }
 const SignupScreen = ({ navigation }) => {
   return (
@@ -68,7 +71,7 @@ const SignupScreen = ({ navigation }) => {
       <FormInput
         //labelValue={Password}
         placeholderText="Email"
-        secureTextEntry={true}
+        secureTextEntry={false}
       />
       <PickerComponent></PickerComponent>
       <LoginButton
@@ -93,7 +96,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#ffffff",
     justifyContent: "center",
-    padding:20,
+    padding: 20,
   },
   welcomeTitle: {
     fontSize: 40,
