@@ -42,7 +42,6 @@ const SignupScreen = ({ navigation }) => {
         placeholderText="Email"
         secureTextEntry={true}
       />
-<<<<<<< HEAD
       <FormInput
         //labelValue={Password}
         placeholderText="I am a..."
@@ -59,7 +58,6 @@ const SignupScreen = ({ navigation }) => {
       >
         <Text style={styles.panelButtonTitle}>Signup As Learner</Text>
       </TouchableOpacity>
-=======
       <Picker
       prompt='Gender'
         selectedValue={'gender'}
@@ -78,7 +76,6 @@ const SignupScreen = ({ navigation }) => {
         <Picker.Item label="Male" value="male" />
         <Picker.Item label="Female" value="female" />
       </Picker>
->>>>>>> 9fced18b8cd0518535fedc02a8a5485105fc15d7
     </View>
   );
 };
@@ -127,10 +124,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     color: "#042B67",
-<<<<<<< HEAD
-    fontFamily: "Montserrat",
-=======
     fontFamily: "Arial",
->>>>>>> 9fced18b8cd0518535fedc02a8a5485105fc15d7
   },
 });
