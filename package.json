@@ -26,5 +26,5 @@
     "@babel/core": "~7.9.0"
   },
   "private": true,
-  "name": "Kappa Kodes"
+  "name": "tutorapp"
 }

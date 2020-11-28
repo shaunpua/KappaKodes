@@ -12,8 +12,7 @@ import {
 import { windowHeight, windowWidth } from "../utils/Dimentions";
 
 import LoginButton from "./../components/LoginButtons";
-import SignUpButton from "./../components/LoginButtons"
-
+import SignUpButton from "./../components/LoginButtons";
 
 const LoginScreen = ({ navigation }) => {
   return (
@@ -32,11 +31,9 @@ const LoginScreen = ({ navigation }) => {
       >
         <Text style={styles.panelButtonTitle}>Log In As Learner</Text>
       </TouchableOpacity>
-      <Text style ={{color:"black"}}>Don't have an account yet?</Text>
-      <TouchableHighlight onPress={() => navigation.navigate("Home")}>
-        <Text style={{ color: "blue" }}>
-          Sign up
-        </Text>
+      <Text style={{ color: "black" }}>Don't have an account yet?</Text>
+      <TouchableHighlight onPress={() => navigation.navigate("Signup")}>
+        <Text style={{ color: "blue" }}>Sign up</Text>
       </TouchableHighlight>
     </View>
   );

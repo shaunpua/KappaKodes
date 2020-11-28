@@ -13,7 +13,6 @@ import { windowHeight, windowWidth } from "../utils/Dimentions";
 import LoginButton from "./../components/LoginButtons";
 import FormInput from "../components/FormInput";
 
-
 const LoginMentor = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -47,6 +46,7 @@ const styles = StyleSheet.create({
   },
   welcomeTitle: {
     fontSize: 40,
+    fontWeight: "bold",
     color: "#042B67",
     fontFamily: "Montserrat",
   },
